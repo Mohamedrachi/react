@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import './Hooyo'
+import Hooyo from './Hooyo';
+import { useState } from 'react';
 
 function App() {
+  const [car,setCar] = useState ("buggati")  // setCar waxaan u isticmlny inaan si fudud u babadlno valuega variable car
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          mohamed ali hussein
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      hello world again
+      <Hooyo hooyo="amazing" aabe="super"/>
+      <Hooyo hooyo="good" aabe="super"/>
+      <Hooyo hooyo="another level" aabe="super"/>
+      <h2>{car}</h2> 
+      <button onClick={()=> setCar("Ferrari")}>change name car</button>
     </div>
   );
 }
 
-export default App;
+export default App; 
